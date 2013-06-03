@@ -4,7 +4,7 @@
  * See: http://speling.shemnon.com/blog/2013/05/18/javafx-gradle-plugin-0-dot-3-0-released/
  ***************************************/
 
-apply from: 'https://repository-javafx-gradle-plugin.forge.cloudbees.com/snapshot/javafx.plugin'
+apply from: 'https://repository-javafx-gradle-plugin.forge.cloudbees.com/release/javafx.plugin'
 
 /***************************************
  * Set Maven coordinates and build vars
@@ -36,7 +36,7 @@ if(! System.env['JAVAFX_HOME'] ) {
 // prefer. In this case NetBeans will not add these tasks but you may rely on
 // your own implementation.
 if (!hasProperty('mainClass')) {
-	ext.mainClass = ''
+    ext.mainClass = 'io.dahuapp.editor.gui.HelloWorld'
 }
 
 repositories {
@@ -54,5 +54,5 @@ dependencies {
 }
 
 javafx {
-	mainClass = 'io.dahuapp.Dummy'
+	mainClass = 'io.dahuapp.editor.gui.HelloWorld'
 }
